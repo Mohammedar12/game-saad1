@@ -1,0 +1,164 @@
+@import url(//db.onlinewebfonts.com/c/b2e75c336df191233b3096682c9ee6be?family=PixelarRegularW01-Regular);
+
+* {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+body {
+    overflow: hidden;
+    margin: 0;
+}
+#score {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: white;
+    font-family: "PixelarRegularW01-Regular";
+    font-size: 30px;
+    font-weight: normal;
+}
+#gameoverscreen {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#gameoverscreen .backdrop {
+    background: black;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+}
+#gameoverscreen .title, 
+#gameoverscreen .score,
+#gameoverscreen button {
+    position: absolute;
+    z-index: 1;
+    left: calc(50% - 102px);
+    top: 45%;
+    width: 205px;
+    text-align: center;
+    color: white;
+    font-family: 'PixelarRegularW01-Regular';
+    font-weight: normal;
+}
+#gameoverscreen .title {
+    margin-top: -65px;
+    font-size: 40px;
+    width: 220px;
+}
+#gameoverscreen .score {
+    font-size: 30px;
+}
+#gameoverscreen button {
+    margin-top: 50px;
+    font-size: 24px;
+    color: black;
+    padding: 5px 25px;
+    cursor: pointer;
+    border: 0;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+#gameoverscreen button:hover{
+    background-color: black;
+    color: white;
+}
+#star {
+    background: url('/img/star.png');
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    background-position: center;
+    background-size: contain;
+}
+
+#game {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: url('/img/Saad.png');
+    background-position: center left;
+    
+}
+#block {
+    width: 45px;
+    height: 100vh;
+    background: url('/img/Saad.png');
+    background-position: center;
+    background-size: contain;
+    position: relative;
+}
+#hole {
+    width: 46px;
+    height: 193px;
+    background: white;
+    background-size: contain;
+    position: relative;
+    top: -500px;
+    background-repeat: no-repeat;
+}
+#character {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border-radius: 50%;
+    background: url('/img/Saad.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.go-up {
+    animation: rotateUp 0.2s;
+    animation-fill-mode:forwards;
+}
+.go-down {
+    animation: rotateDown 0.2s;
+    animation-fill-mode:forwards;
+}
+
+@keyframes rotateUp {
+    0% { transform: rotate( 0deg ) }
+    100% { transform: rotate( -35deg ) }
+}
+@keyframes rotateDown {
+    0% { transform: rotate( 0deg ) }
+    100% { transform: rotate( 35deg ) }
+}
+
+
+@keyframes blockAnimation {
+    0% { left: 100vw; }
+    100% { left: -50px; }
+}
+
+
+@keyframes backgroundAnimation {
+    0% { background-position-x: 100vw }
+    100% { background-position-x: 0 }
+}
+@keyframes starAnimation1 {
+    0% { left: 50vw; }
+    100% { left: -50px; }
+}
+@keyframes starAnimation2 {
+    0% { left: 60vw; }
+    100% { left: -50px; }
+}
+@keyframes starAnimation3 {
+    0% { left: 70vw; }
+    100% { left: -50px; }
+}
+@keyframes starAnimation4 {
+    0% { left: 80vw; }
+    100% { left: -50px; }
+}
+@keyframes starAnimation5 {
+    0% { left: 90vw; }
+    100% { left: -50px; }
+}
+
